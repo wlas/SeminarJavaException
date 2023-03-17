@@ -29,7 +29,7 @@ public class ParsService {
                 if (Integer.parseInt(arrayDate[0]) < 0 ||
                         Integer.parseInt(arrayDate[0]) > 31 || Integer.parseInt(arrayDate[1]) < 0 ||
                         Integer.parseInt(arrayDate[1]) > 12 || Integer.parseInt(arrayDate[2]) < 0 ||
-                        Integer.parseInt(arrayDate[2]) > 2022) {
+                        Integer.parseInt(arrayDate[2]) > 2023) {
                     try {
                         throw new DateException();
                     } catch (DateException e) {
@@ -47,11 +47,13 @@ public class ParsService {
                             if (Integer.parseInt(arrayDate[0]) < 32) {
                                 flag = false;
                             }
-                        } else if (Integer.parseInt(arrayDate[1]) == 2) {
+                        }                         
+                        else if (Integer.parseInt(arrayDate[1]) == 2) {
                             if (Integer.parseInt(arrayDate[0]) < 30) {
                                 flag = false;
                             }
-                        } else if (Integer.parseInt(arrayDate[1]) == 4 ||
+                        }                        
+                        else if (Integer.parseInt(arrayDate[1]) == 4 ||
                                 Integer.parseInt(arrayDate[1]) == 6 ||
                                 Integer.parseInt(arrayDate[1]) == 8 ||
                                 Integer.parseInt(arrayDate[1]) == 11) {
